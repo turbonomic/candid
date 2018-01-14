@@ -1,0 +1,86 @@
+<ResponseBean>
+   <success>true</success>
+   <value>
+      <namespaces>
+         <default>https://candid.cisco.com/api/schema</default>
+      </namespaces>
+      <data>
+         <category>TENANT_ROUTING</category>
+         <mnemonic>LEAF_CONFIGURED_INTERFACE_ADMIN_UP_LINK_DOWN</mnemonic>
+         <severity>EVENT_SEVERITY_CRITICAL</severity>
+         <pod>pod-1</pod>
+         <nodeName>node-102</nodeName>
+         <interfaceSummary>
+            <dn>topology/pod-1/node-102/sys/phys-[eth1/4]</dn>
+            <name>[eth1/4]</name>
+            <apicClass />
+            <displayName>eth1/4</displayName>
+            <description />
+            <mtu />
+            <layer2Layer3 />
+            <routerMac />
+            <portType />
+            <adminStateUp />
+            <operStateUp />
+            <switchingStateEnabled />
+            <modeTrunk />
+         </interfaceSummary>
+         <details>
+            <details>
+               <interfaceDetails>
+                  <interfaceType>port</interfaceType>
+                  <interfaceUseType>Host</interfaceUseType>
+                  <interfaceProfile>
+                     <dn>uni/infra/accportprof-UCS_C_ESXi_Trunks</dn>
+                     <name>UCS_C_ESXi_Trunks</name>
+                     <apicClass />
+                     <displayName />
+                     <description />
+                     <status />
+                  </interfaceProfile>
+                  <interfaceSelector>
+                     <dn>uni/infra/accportprof-UCS_C_ESXi_Trunks/hports-ESXi01-typ-range</dn>
+                     <name>ESXi01</name>
+                     <apicClass>infraHPortS</apicClass>
+                     <displayName />
+                  </interfaceSelector>
+                  <interfacePolicyGroup>
+                     <dn>uni/infra/funcprof/accportgrp-UCS_C_ESXi_Trunks</dn>
+                     <name>UCS_C_ESXi_Trunks</name>
+                     <apicClass />
+                     <displayName />
+                     <attachableAccessEntityProfile />
+                     <linkLevelPolicy />
+                     <cdpInterfacePolicy />
+                     <misCablingProtocolInterfacePolicy />
+                     <lldpInterfacePolicy />
+                     <spanningTreeInterfacePolicy />
+                     <stormControlInterfacePolicy />
+                     <l2InterfacePolicy />
+                     <portSecurityPolicy />
+                     <ingressDataPlanePolicingPolicy />
+                     <egressDataPlancePolicingPolicy />
+                     <monitoringPolicy />
+                     <interfacePriorityFlowControl />
+                     <fibreChannelInteracePolicy />
+                     <slowDrainPolicy />
+                  </interfacePolicyGroup>
+                  <aep>
+                     <dn>uni/infra/attentp-Pod1</dn>
+                     <name>Pod1</name>
+                     <apicClass />
+                     <displayName />
+                     <infrastructureVlanEnabled>false</infrastructureVlanEnabled>
+                  </aep>
+               </interfaceDetails>
+            </details>
+         </details>
+         <links />
+         <sub_category>PORT</sub_category>
+      </data>
+      <data_summary>
+         <total_count>1</total_count>
+         <has_more_data>false</has_more_data>
+      </data_summary>
+   </value>
+</ResponseBean>

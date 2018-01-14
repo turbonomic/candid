@@ -1,0 +1,13 @@
+{
+    "Turbo": {
+        "turboHost": "https://192.168.130.21",
+        "turboUser": "administrator",
+        "turboPassword": "Cisco!123"
+    },
+    "Candid": {
+        "candidHost": "https://192.168.130.31",
+        "candidUserName": "administrator",
+        "candidPassword": "Cisco!123"
+    }
+}
+    

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResponseBean>
+   <success>true</success>
+   <value>
+      <namespaces>
+         <default>https://candid.cisco.com/api/schema</default>
+      </namespaces>
+      <data>
+         <uuid>d75a73a5-c671-47b7-b2f7-d17528953748</uuid>
+         <systemObject>false</systemObject>
+         <interval>900</interval>
+         <analysisTimeoutInSecs>1500</analysisTimeoutInSecs>
+         <status>RUNNING</status>
+         <links>
+            <links>
+               <rel>self</rel>
+               <href>http://192.168.130.21/api/v1/assured-networks/aci-fabric/d75a73a5-c671-47b7-b2f7-d17528953748</href>
+            </links>
+         </links>
+         <unique_name>Ecosystem-Fabric</unique_name>
+         <assured_network_type>ACI_FABRIC</assured_network_type>
+         <apic_hostnames>
+            <apic_hostnames>192.168.130.10</apic_hostnames>
+            <apic_hostnames>192.168.130.11</apic_hostnames>
+            <apic_hostnames>192.168.130.12</apic_hostnames>
+         </apic_hostnames>
+         <username>admin</username>
+         <application_id>application_1512805820161_0001</application_id>
+         <active>true</active>
+         <operational_mode>ONLINE</operational_mode>
+      </data>
+      <data_summary>
+         <links>
+            <links>
+               <rel>self</rel>
+               <href>http://192.168.130.21/api/v1/assured-networks/aci-fabric</href>
+            </links>
+         </links>
+         <total_count>1</total_count>
+         <has_more_data>false</has_more_data>
+      </data_summary>
+   </value>
+</ResponseBean>
