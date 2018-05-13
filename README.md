@@ -28,7 +28,7 @@ Usage of ./candid:
 
 ### Run it
 ```bash
-./candid --candidhost=https://10.10.174.134 --candiduser=admin --candidpasspass=password \
+./candid --candidhost=https://10.10.174.133 --candiduser=admin --candidpasspass=password \
   --turbohost=https://10.10.174.134 --turbouser=administrator --turbopassword=password
 ```
 
