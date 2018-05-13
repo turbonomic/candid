@@ -5,6 +5,7 @@ import (
 	"crypto/tls"
 	"encoding/xml"
 	"fmt"
+	"strings"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -136,14 +137,17 @@ func (c *TurboRestClient) updateGroup(groupUUID string, memberUUIDs []string) ([
 	//0. create request data
 	var members string
 	for index, element := range memberUUIDs {
+		//element: topology/pod-1/node-101/sys/phys-[eth1/5]
+		dn := strings.Split(element,"/")
+		leaf := strings.Replace(dn[2], "node", "leaf", -1)
 		if index == 0 {
-			members = "\"" + element + "\""
+			members = leaf
 		} else {
-			members = members + ",\"" + element + "\""
+			members = members + "|" + leaf
 		}
 	}
 
-	var groupDATA = "{\"isStatic\":true,\"memberUuidList\":[" + members + "],\"displayName\":\"PMs_CandidLinkDown\",\"groupType\":\"PhysicalMachine\",\"criteriaList\":[]}"
+	var groupDATA = "{\"isStatic\":false,\"memberUuidList\":[],\"displayName\":\"PMs_CandidLinkDown\",\"groupType\":\"PhysicalMachine\",\"criteriaList\":[{\"expType\":\"EQ\",\"expVal\":\"" + members + "\",\"filterType\":\"pmsBySwitch\",\"caseSensitive\":false}]}"
 
 	//1. a new http request
 	urlStr := fmt.Sprintf("%s%s", c.host, TURBO_PATH_GROUP+"/"+groupUUID)
